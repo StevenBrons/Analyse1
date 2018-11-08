@@ -1,63 +1,17 @@
-\newmdenv[
-  topline=false,
-  bottomline=false,
-  skipabove=\topsep,
-  skipbelow=\topsep
-]{siderules}
-
-\newenvironment{component}[1]{%
-\begin{addmargin}[1em]{2em}
-\begin{tabular}{|p{10cm}}
-}{
-\end{tabular}
-\end{addmargin}
+\newcommand{\uitwerking}[1]{
+	\begin{tabular}{|ll}
+    	#1 &
+	\end{tabular}\\
 }
-
 
 
 \newcommand{\definitie}[2]{
     \textbf{Def:} #1\\
-	\begin{addmargin}[1em]{2em}
-	\begin{tabular}{|p{10cm}}
-    	#2
-	\end{tabular}
-	\end{addmargin}
+	\uitwerking{#2}
 }
 
-\newcommand{\als}[2]{
+\newcommand{\als}[1]{
     \textbf{Als:} #1\\
-    	\begin{addmargin}[1em]{2em}
-	\begin{tabular}{|p{10cm}}
-    	#2
-    	\end{tabular}
-	\end{addmargin}
 }
 
 
-\newcommand{\feit}[2]{
-    \textbf{Feit:} #1\\
-    \begin{component}
-    	#2
-    \end{component}
-}
-
-\newcommand{\stelling}[2]{
-    \textbf{Stelling:} #1\\
-    \begin{component}
-    	#2
-    \end{component}
-}
-
-\newcommand{\bewijs}[2]{
-    \textbf{Bewijs:} #1\\
-    \begin{component}
-    	#2
-    \end{component}
-}
-
-\newcommand{\lemma}[2]{
-    \textbf{Lemma:} #1\\
-    \begin{component}
-    	#2
-    \end{component}
-}
