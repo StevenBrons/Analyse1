@@ -1,19 +1,59 @@
 \section{Week 1}
-\definitie{totale ordening}{
+
+\definitie{$\leq$ is totale ordening}{
 	\als{$\leq$ partiele ordening}
 	\uitwerking{
 		$\forall x: x \leq x$ (reflexief)\\
-		$\forall x,y: x \leq y \wedge y \leq z \to x \leq z$ (transitief)\\
-		$\forall x,y: x \leq y \wedge y \leq x \to x = y$ (antisymetrish)
+		$\forall x,y: x \leq y \wedge y \leq z \Rightarrow x \leq z$ (transitief)\\
+		$\forall x,y: x \leq y \wedge y \leq x \Rightarrow x = y$ (antisymetrish)
 	}
-	\als{$\leq$ is totaal}
+	\als{$\leq$ totaal is}
 	\uitwerking {
 		$\forall x,y: x \leq y \wedge y \leq x$
 	}
 }
-\definitie{geordend lichaam} {
+\definitie{$F$ is geordend lichaam} {
 Een lichaam $(F,+,*,0,1)$ met een totale ordening $\leq$ op $F$\\
-\als{$\forall a,b,c \in F: a \leq b \to a + c \leq b + c$}
-\als{$\forall a,b,c \in F: a \leq b \wedge c \geq 0 \to ac \leq bc$}
-
+\als{$\forall a,b,c \in F: a \leq b \Rightarrow a + c \leq b + c$}
+\als{$\forall a,b,c \in F: a \leq b \wedge c \geq 0 \Rightarrow ac \leq bc$}
 }
+\definitie{$b$ is bovengrens} {
+$A \subseteq X, b \in X$\\
+\als{$\forall x \in X: a \leq b$}
+}
+\definitie{$A$ is naar boven begrensd} {
+\als{A heeft bovengrens}
+}
+\definitie{$a$ is grootste element} {
+$A \subseteq X, a \in A$\\
+\als{$a$ is bovengrens}
+}
+\definitie{supremum/kleinste bovengrens A}{
+Zij $A \subseteq X, b \in X$\\
+\als{$b$ bovengrens $A$}
+\als{$c \in X$ bovengrens $A, \forall c:b \leq c$}
+}
+\definitie{volledig totaal geordende verzameling $(X,\leq)$} {
+	\als{Elke naar boven begrensde deelverzameling $A \subseteq X$ een supremum heeft}
+}
+\feit{$(\mathbb{Q},\leq)$ is niet volledig}
+\feit{$\mathbb{R}$ is de completering van $(\mathbb{Q}$}
+\definitie{S is een Dedekind snede}{
+	\als{$S \subseteq \mathbb{Q}$}
+	\als{$\mathbb{Q} \neq S \neq \emptyset$}
+	\als{$x,y \in \mathbb{Q}: x\leq y \wedge y \in S \Rightarrow x \in s$}
+	\als{$S$ heeft geen grootste element}
+	\uitwerking{
+		$\forall x\in S  \exists y \in S $ zdd. $y > x$
+	}
+}
+\feit{$S,T \in \mathbb{R}: S\leq T \Leftrightarrow S \subseteq T$}
+\feit{$(\mathbb{R},+,*,\leq)$ is een volledig geordend lichaam}
+\stelling{Als $R_1,R_2$ volledige geordende lichamen zijn, dan is er een bijectie $\alpha: R_1 \to R_2$ die alle structuren behoudt}
+\uitwerking{
+	$x,y \in R_1$\\
+	\als{$\alpha(x + y) = \alpha(x) + \alpha(y)$}
+	\als{$\alpha(xy) = \alpha(x)\alpha(y)$}
+	\als{$a,b \in R_2: x \leq y \Leftrightarrow a \leq b$}
+}
+
