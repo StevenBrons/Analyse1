@@ -1,17 +1,17 @@
 \newcommand{\uitwerking}[1]{
 	\begin{tabular}{|ll}
     	#1 &
-	\end{tabular}\\
+	\end{tabular}
 }
 
 
 \newcommand{\definitie}[2]{
-    \textbf{Def:} #1\\
-	\uitwerking{#2}
+    \textbf{Def:} #1\\*
+	\uitwerking{#2}\\*
 }
 
 \newcommand{\als}[1]{
-    \textbf{Als:} #1\\
+    \textbf{Als:} #1
 }
 
 \newcommand{\feit}[1]{
@@ -19,11 +19,19 @@
 }
 
 \newcommand{\bewijs}[1]{
-	\uitwerking{#1}\\
+	\textbf{Bewijs:}\\
+	\uitwerking{#1}\qed
 }
 
 \newcommand{\stelling}[1]{
     \textbf{Stelling:} #1\\
 }
 
+\newcommand{\lemma}[1]{
+    \textbf{Lemma:} #1\\
+}
+
+\newcommand{\propositie}[1]{
+    \textbf{Propositie:} #1\\
+}
 
