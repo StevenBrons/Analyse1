@@ -46,9 +46,15 @@ $\beta(\alpha(x))=sup(\{r\in \Q |r < sup(\{s\in \Q | s<x\})\})=x$
 	voor $N\geq n$: $N\geq n\implies\frac{1}{N}\leq\frac{1}{n}<\epsilon\implies\frac{1}{N}<\epsilon$
 }
 
-
-
-
+\feit{als een rij een limiet heeft dan is deze uniek}
+\bewijs{
+	stel $k,l$ zijn limieten: $\{a_n\}\to k \land \{a_n\}\to l$ dan:\\
+	$\forall_{\epsilon>0}\exists_{n\in\mathbb{R}}\forall_{N>n}(\left|a_N-k\right|<\epsilon\land\left|a_N-l\right|<\epsilon)$\\
+	neem dan $\epsilon=\frac{\left|k-l\right|}{3}$:\\
+	$\left|a_N-k\right|<\frac{\left|k-l\right|}{3}\implies a_N<k+\frac{\left|k-l\right|}{3}$\\
+	$\implies \frac{\left|k-l\right|}{3}>\left|a_N-l\right|>\frac{2\left|k-l\right|}{3}\implies k-l=0\implies k=l$\\
+	Dus als er een limiet bestaat, is deze uniek
+}
 
 
 \end{multicols}
