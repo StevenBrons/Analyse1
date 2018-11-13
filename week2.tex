@@ -12,9 +12,31 @@ $\alpha(x+y) = \alpha(x) + \alpha(y)$
 }
 \bewijs{
 (Schets)
-Zij $x\in K$ def $C_x = \{r\in\mathbb{Q}|r < x\}\subseteq \mathbb{Q}$\\
-$K$ is Archimedis, dus $\exists n\in\mathbb{}$
-
+Zij $x\in K$ def $C_x = \{r\in\Q|r < x\}\subseteq \Q$\\
+$K$ is Archimedis, dus $\exists n\in\N$ zdd $n \geq x$\\
+Nu is $n$ is een bovengrens voor $C_x$\\
+$(n\in \N) \in C_x \subseteq \Q \subseteq L$\\
+$L$ is volledig, dus elke naar boven begrensde\\
+verzameling heeft een supremum\\
+$y_x=sup(C_x)\in L$\\
+$x \in K \wedge y_x \in L$ dus $K \xrightarrow{\alpha} L$\\
+$\alpha$ voldoet aan de eisen:\\
+\als{$x < y$}\\
+\uitwerking{
+Moet gelden dat: $\Rightarrow \alpha(x) < \alpha(y)$\\
+Zij $x,y\in K$ met $x < y$\\
+Dan $\exists r \in \Q$ zdd $x < r < s < y$\\
+Dus $r \in C_y$ maar $r \not\in C_x$\\
+$C_x \subseteq C_y$, dus $C_x \subset C_y$\\
+dus $C_x < C_y$ (orde van $\R$)\\
+dus $\alpha(x) = sup(C_x)\leq r < s \leq sup(C_y) = \alpha(y)$\\
+dus $\alpha(x)$ is injectief en orde behoudend!
+}\\
+Omgekeerd werkt dit ook met $\beta: L \to K$\\
+is een inverse afbeelding van $\alpha$\\
+dus $\beta(\alpha(x))=x$ en $\alpha(\beta(y))=y$\\
+dus $\alpha \wedge \beta$ zijn bijecties!\\
+$\beta(\alpha(x))=sup(\{r\in \Q |r < sup(\{s\in \Q | s<x\})\})=x$
 }
 
 
