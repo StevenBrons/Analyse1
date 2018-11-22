@@ -1,12 +1,12 @@
 \section{Week 2}
 \begin{multicols}{2}
 
-\stelling{Zij K,L volledig geordende lichamen, dan is er een bijectie $\alpha:K \to L$ die de ordening behoudt en de lichaamsoperatie}
+\stelling{Zij K,L volledig geordende lichamen, dan is er een bijectie $\alpha:K \to L$ die de ordening  en de lichaamsoperatie behouden}
 \uitwerking{
 Er is maar \'e\'en geordend lichaam
 $x,y \in K$\\
-$x < y \Rightarrow \alpha(x) < \alpha(y)$
-$\alpha(0) = 0$
+$x < y \Rightarrow \alpha(x) < \alpha(y)$,
+$\alpha(0) = 0$,
 $\alpha(x+y) = \alpha(x) + \alpha(y)$
 }
 \bewijs{
@@ -56,5 +56,56 @@ $\beta(\alpha(x))=sup(\{r\in \Q |r < sup(\{s\in \Q | s<x\})\})=x$
 	Dus als er een limiet bestaat, is deze uniek
 }
 
+
+\stelling{Zij $0\leq y \in \mathbb{R}$ en $1 > n \in \N$, dan is er een unieke $0 \leq s \in \mathbb{R}$ zdd. $s^n = y$}
+\bewijs{
+	Eenheid van de oplossing:\\
+	\uitwerking{
+		$(a^n-b^n) = (a-b)(a^{n-1} + a^{n-2}b + ... + b^{n-1})$\\
+		Zij $a,b \geq 0 \wedge a^n = b^n \Rightarrow a = b$\\ (want tweede deel $\geq 0$ dus $(a-b)=0$
+	}\\
+	Existentie:\\
+	\uitwerking{
+	Def $B=\{x\in \mathbb{R}|x\geq0, x^n\leq\})$\\
+	$0\in B$, dus $B \neq \emptyset$
+	}\\
+	Bewering: $B$ is naar boven begrensd\\
+	\uitwerking{
+		\als $y \leq 1 \wedge x \in B$ dan geldt $x^n \leq y \leq 1 \to x \leq 1$\\	
+		Dus 1 is een bovengrens voor verzameling B\\
+		\als $y \geq 1 \to y^n \geq y \wedge x\in B$\\
+		Dan geldt $0 \geq x^n \geq y \geq y^n \Rightarrow x \geq y$\\
+		Dus B is naar boven begrensd door y
+	}\\
+	Omdat B naar boven begrensd is en $\mathbb{R}$ volledig is,\\
+	geldt $0 \geq sup(B) \in \mathbb{R}$\\
+	Def $s := sup(B)$\\
+	\lemma{\\
+	Als $0 < \epsilon < 1 \wedge n\in \mathbb{N}$\\
+	Dan $1-n\epsilon \leq (1 - \epsilon)^n<(1+\epsilon)^n\leq 1 + (2^n-1)\epsilon$	
+	}
+	\uitwerking{
+		Inductie over n:\\
+		Inductiebegin: $n-\epsilon \leq (1 - \epsilon) < 1 + \epsilon \leq 1 + \epsilon$\\
+		Inductiehypothese: stel (*) is waar voor $n \in \mathbb{N}$\\
+		$(1-\epsilon)^{n+1}=(1-\epsilon)(1-\epsilon)^n\geq(1-\epsilon)(1-n\epsilon)=..$\\
+		$..=1-(n+1)\epsilon+n\epsilon^2 > 1 - 	(n+1)\epsilon$\\
+		en ook:\\
+		$(1+\epsilon^{n+1}=(1+\epsilon)(1+\epsilon)^n) \leq ..$\\
+		$..(1+\epsilon)(1+(2^n -1)\epsilon)$\\
+		$..=1+\epsilon2^n+(2^n -1)\epsilon^2 < 1 + \epsilon2^n + (2_n-1)\epsilon=..$\\
+		$..=1+\epsilon(2^{n+1}-1)$
+	}\\
+	Stel $s^n < y$\\
+	Gezien $y - s^n > 0$ kunnen we $\eta \in \mathbb{R}$ kiezen\\
+	zdd. $0 < \eta < \frac{y-s^n}{2^n-1}s^n$\\
+	Dan met gebruik lemma:\\
+	$((1+\eta)s)^n \leq s^n +(2^n -1)\eta s^n < s^n + (y - s^n) = y$\\
+	Dus $(1 + \eta)s \in B$ Tegenspraak!\\
+	Want $\eta > 1$ en $s = sup(B)$\\
+	Andere helft van het bewijs ($s^n > y$):\\
+	Werkt met het andere deel van de ongelijkheid\\
+	uit het lemma. Samen zeggen ze dat $s^n = y$
+}
 
 \end{multicols}
