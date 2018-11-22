@@ -1,0 +1,121 @@
+\section{Week 2}
+\begin{multicols}{2}
+
+\stelling{Zij K,L volledig geordende lichamen, dan is er een bijectie $\alpha:K \to L$ die de ordening  en de lichaamsoperatie behouden}
+\uitwerking{
+Er is maar \'e\'en geordend lichaam
+$x,y \in K$\\
+$x < y \Rightarrow \alpha(x) < \alpha(y)$,
+$\alpha(0) = 0$,
+$\alpha(x+y) = \alpha(x) + \alpha(y)$
+}
+\bewijs{
+(Schets)
+Zij $x\in K$ def $C_x = \{r\in\Q|r < x\}\subseteq \Q$\\
+$K$ is Archimedis, dus $\exists n\in\N$ zdd $n \geq x$\\
+Nu is $n$ is een bovengrens voor $C_x$\\
+$(n\in \N) \in C_x \subseteq \Q \subseteq L$\\
+$L$ is volledig, dus elke naar boven begrensde\\
+verzameling heeft een supremum\\
+$y_x=sup(C_x)\in L$\\
+$x \in K \wedge y_x \in L$ dus $K \xrightarrow{\alpha} L$\\
+$\alpha$ voldoet aan de eisen:\\
+\als{$x < y$}\\
+\uitwerking{
+Moet gelden dat: $\Rightarrow \alpha(x) < \alpha(y)$\\
+Zij $x,y\in K$ met $x < y$\\
+Dan $\exists r \in \Q$ zdd $x < r < s < y$\\
+Dus $r \in C_y$ maar $r \not\in C_x$\\
+$C_x \subseteq C_y$, dus $C_x \subset C_y$\\
+dus $C_x < C_y$ (orde van $\R$)\\
+dus $\alpha(x) = sup(C_x)\leq r < s \leq sup(C_y) = \alpha(y)$\\
+dus $\alpha(x)$ is injectief en orde behoudend!
+}\\
+Omgekeerd werkt dit ook met $\beta: L \to K$\\
+is een inverse afbeelding van $\alpha$\\
+dus $\beta(\alpha(x))=x$ en $\alpha(\beta(y))=y$\\
+dus $\alpha \wedge \beta$ zijn bijecties!\\
+$\beta(\alpha(x))=sup(\{r\in \Q |r < sup(\{s\in \Q | s<x\})\})=x$
+}
+
+\stelling{Zij $y \in \R \geq 0 \wedge n \in \N \Rightarrow \exists! 0 \leq x \in \R$ zdd $x^n = y$}
+\bewijs{
+\uitwerking{
+Niet meer dan 1 opl:\\
+$a^n-b^n=(a-b)(a^{n-1}+ba^{n-2}+...+ab^{n-2)+b^{n-1})$\\
+Zij $a,b>0 $ dan $(a^{n-1}+ba^{n-2}+...+ab^{n-2)+b^{n-1}) > 0$\\
+$a,b>0\wedgeb a^n=b^n$ dan $a=b$
+}
+}
+
+\feit{$\frac{1}{n}$ is een nulrij}
+\bewijs{
+	gegeven een $\epsilon>0$ dan:\\
+	$\epsilon>0\implies \frac{1}{\epsilon}>0\implies \exists_{n\in\mathbb{R}}n>\frac{1}{\epsilon}\implies\frac{1}{n}<\epsilon$.\\
+	We weten dat deze $n$ bestaat omdat $\mathbb{R}$ archimedisch is.\\
+	voor $N\geq n$: $N\geq n\implies\frac{1}{N}\leq\frac{1}{n}<\epsilon\implies\frac{1}{N}<\epsilon$
+}
+
+\feit{als een rij een limiet heeft dan is deze uniek}
+\bewijs{
+	stel $k,l$ zijn limieten: $\{a_n\}\to k \land \{a_n\}\to l$ dan:\\
+	$\forall_{\epsilon>0}\exists_{n\in\mathbb{R}}\forall_{N>n}(\left|a_N-k\right|<\epsilon\land\left|a_N-l\right|<\epsilon)$\\
+	neem dan $\epsilon=\frac{\left|k-l\right|}{3}$:\\
+	$\left|a_N-k\right|<\frac{\left|k-l\right|}{3}\implies a_N<k+\frac{\left|k-l\right|}{3}$\\
+	$\implies \frac{\left|k-l\right|}{3}>\left|a_N-l\right|>\frac{2\left|k-l\right|}{3}\implies k-l=0\implies k=l$\\
+	Dus als er een limiet bestaat, is deze uniek
+}
+
+
+\stelling{Zij $0\leq y \in \mathbb{R}$ en $1 > n \in \N$, dan is er een unieke $0 \leq s \in \mathbb{R}$ zdd. $s^n = y$}
+\bewijs{
+	Eenheid van de oplossing:\\
+	\uitwerking{
+		$(a^n-b^n) = (a-b)(a^{n-1} + a^{n-2}b + ... + b^{n-1})$\\
+		Zij $a,b \geq 0 \wedge a^n = b^n \Rightarrow a = b$\\ (want tweede deel $\geq 0$ dus $(a-b)=0$
+	}\\
+	Existentie:\\
+	\uitwerking{
+	Def $B=\{x\in \mathbb{R}|x\geq0, x^n\leq\})$\\
+	$0\in B$, dus $B \neq \emptyset$
+	}\\
+	Bewering: $B$ is naar boven begrensd\\
+	\uitwerking{
+		\als $y \leq 1 \wedge x \in B$ dan geldt $x^n \leq y \leq 1 \to x \leq 1$\\	
+		Dus 1 is een bovengrens voor verzameling B\\
+		\als $y \geq 1 \to y^n \geq y \wedge x\in B$\\
+		Dan geldt $0 \geq x^n \geq y \geq y^n \Rightarrow x \geq y$\\
+		Dus B is naar boven begrensd door y
+	}\\
+	Omdat B naar boven begrensd is en $\mathbb{R}$ volledig is,\\
+	geldt $0 \geq sup(B) \in \mathbb{R}$\\
+	Def $s := sup(B)$\\
+	\lemma{\\
+	Als $0 < \epsilon < 1 \wedge n\in \mathbb{N}$\\
+	Dan $1-n\epsilon \leq (1 - \epsilon)^n<(1+\epsilon)^n\leq 1 + (2^n-1)\epsilon$	
+	}
+	\uitwerking{
+		Inductie over n:\\
+		Inductiebegin: $n-\epsilon \leq (1 - \epsilon) < 1 + \epsilon \leq 1 + \epsilon$\\
+		Inductiehypothese: stel (*) is waar voor $n \in \mathbb{N}$\\
+		$(1-\epsilon)^{n+1}=(1-\epsilon)(1-\epsilon)^n\geq(1-\epsilon)(1-n\epsilon)=..$\\
+		$..=1-(n+1)\epsilon+n\epsilon^2 > 1 - 	(n+1)\epsilon$\\
+		en ook:\\
+		$(1+\epsilon^{n+1}=(1+\epsilon)(1+\epsilon)^n) \leq ..$\\
+		$..(1+\epsilon)(1+(2^n -1)\epsilon)$\\
+		$..=1+\epsilon2^n+(2^n -1)\epsilon^2 < 1 + \epsilon2^n + (2_n-1)\epsilon=..$\\
+		$..=1+\epsilon(2^{n+1}-1)$
+	}\\
+	Stel $s^n < y$\\
+	Gezien $y - s^n > 0$ kunnen we $\eta \in \mathbb{R}$ kiezen\\
+	zdd. $0 < \eta < \frac{y-s^n}{2^n-1}s^n$\\
+	Dan met gebruik lemma:\\
+	$((1+\eta)s)^n \leq s^n +(2^n -1)\eta s^n < s^n + (y - s^n) = y$\\
+	Dus $(1 + \eta)s \in B$ Tegenspraak!\\
+	Want $\eta > 1$ en $s = sup(B)$\\
+	Andere helft van het bewijs ($s^n > y$):\\
+	Werkt met het andere deel van de ongelijkheid\\
+	uit het lemma. Samen zeggen ze dat $s^n = y$
+}
+
+\end{multicols}
