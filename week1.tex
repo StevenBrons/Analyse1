@@ -46,15 +46,15 @@ Zij $A \subseteq X, b \in X$\\
 
 \feit{$(\Q,\leq)$ is niet volledig}
 
-\feit{$\R$ is de completering van $(\Q$}
+\feit{$\R$ is de completering van $\Q$ t.o.v. $\geq$}
 
 \definitie{S is een Dedekind snede}{
 	\als{$S \subseteq \Q$}\\
 	\als{$\Q \neq S \neq \emptyset$}\\
-	\als{$x,y \in \Q: x\leq y \wedge y \in S \Rightarrow x \in s$}\\
+	\als{$x,y \in \Q: x\leq y \wedge y \in S \Rightarrow x \in S$}\\
 	\als{$S$ heeft geen grootste element}\\
 	\uitwerking{
-		$\forall x\in S  \exists y \in S $ zdd. $y > x$
+		$\forall x\in S \exists y \in S $ zdd. $y > x$
 	}
 }
 
@@ -62,7 +62,7 @@ Zij $A \subseteq X, b \in X$\\
 
 \feit{$(\R,+,*,\leq)$ is een volledig geordend lichaam}
 
-\feit{Zij F geordend lichaam, dan $\forall x \ in F: x^2 \geq 0$ en $1 \geq 0$}
+\feit{Zij F geordend lichaam, dan $\forall x \in F: x^2 \geq 0$ en $1 \geq 0$}
 \bewijs{
 	\als{$x \geq 0$ dan $x^2=x*x\geq 0$}\\
 	\als{$x < 0$ dan $x^2=(-x)^2 > 0$}\\
@@ -79,7 +79,7 @@ Zij $A \subseteq X, b \in X$\\
 
 \lemma{Zij $F$ een willekeurig lichaam, dan is er een unieke afbeelding $\alpha: \Q \to F$ zdd $\alpha(0) = 0, \alpha(1) = 1, \alpha(m + n) = \alpha(m) + \alpha(m)$}
 \bewijs{
-	$\alpha(0)=0, \alpha(1)=1 \alpha(s(x)) = \alpha(x) + 1$\\*
+	$\alpha(0)=0, \alpha(1)=1, \alpha(s(x)) = \alpha(x) + 1$\\*
 	Deze afbeelding voldoet automatisch aan: \\*$\alpha(x + y) = \alpha(x) + \alpha(y)$
 }
 
@@ -110,11 +110,11 @@ Dus $n \neq m \Leftrightarrow \alpha(n) \neq \alpha(m)$ dus injectie
 	Dus als $F$ een geordend lichaam is $\Rightarrow F$\\ heeft karakteristiek nul $\alpha$ is injectie.
 }\\
 
-\definitie{Een geordend lichaam heet Archimedis}{
+\definitie{Een geordend lichaam heet Archimedisch}{
 	\als{$\forall x \in F  \exists n \in \N$ zdd $x \leq \alpha(n)$}
 }
 
-\stelling{Elk volledig geordend lichaam is Archimedis}
+\stelling{Elk volledig geordend lichaam is Archimedisch}
 \bewijs{
 \als{$x \leq 0$ dan is $n = 0$ goed}\\
 \als{$x > 0$}\\
@@ -149,8 +149,8 @@ Dus $n \neq m \Leftrightarrow \alpha(n) \neq \alpha(m)$ dus injectie
 	\als{$x < y \leq 0 \Rightarrow 0 \leq -y < -x$}\\
 	\uitwerking{
 		Stel de uitspraak is bewezen voor\\ $0 \leq x \leq y \Rightarrow -y < r < -x\Rightarrow x < -r < y$\\
-		Stel $0 \leq x < y \Rightarrow \exists n \in \N$ zdd $\frac{1}{n} < y - x$.(archimedis)\\
-		Def $A = \{k \in \N_0|k \leq nx\} \neq \emptyset$ (archimedis)\\
+		Stel $0 \leq x < y \Rightarrow \exists n \in \N$ zdd $\frac{1}{n} < y - x$.(archimedisch)\\
+		Def $A = \{k \in \N_0|k \leq nx\} \neq \emptyset$ (archimedisch)\\
 		Def $a = max(A) \in \N_0$: nu $a \leq nx < a + 1$\\
 		$\frac{a}{n} \leq x < \frac{a+1}{n=r}$\\
 		$r = \frac{a}{n} + \frac{1}{n} < x + (y-x) < y$
@@ -164,8 +164,8 @@ Dus $n \neq m \Leftrightarrow \alpha(n) \neq \alpha(m)$ dus injectie
 	\uitwerking{
 		Stel de uitspraak is bewezen voor\\
 		$0 \leq x \leq y \Rightarrow -y < r < -x\Rightarrow x < -r < y$\\
-		Stel $0 \leq x < y \Rightarrow \exists n \in \N$ zdd $\frac{1}{n} < y - x$.(archimedis)\\
-		Def $A = \{k \in \N_0|k \leq nx\} \neq \emptyset$ (archimedis)\\
+		Stel $0 \leq x < y \Rightarrow \exists n \in \N$ zdd $\frac{1}{n} < y - x$.(archimedisch)\\
+		Def $A = \{k \in \N_0|k \leq nx\} \neq \emptyset$ (archimedisch)\\
 		Def $a = max(A) \in \N_0$: nu $a \leq nx < a + 1$\\
 		$\frac{a}{n} \leq x < \frac{a+1}{n=r}$\\
 		$r = \frac{a}{n} + \frac{1}{n} < x + (y-x) < y$
