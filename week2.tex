@@ -1,7 +1,11 @@
 \section{Week 2}
 \begin{multicols}{2}
 
-\stelling{Zij K,L volledig geordende lichamen, dan is er een bijectie $\alpha:K \to L$ die de ordening behoudt en de lichaamsoperatie}
+\feit{Een lichaam K heeft karakteristiek nu desda $\Q \subseteq K$}
+\feit{Elk geordend lichaam heeft karakteristiek nul}
+\feit{Een geordend lichaam heet Archimisch als $\forall x \in K \exists n \in \N$ met $x \leq n$}
+
+\stelling{Zij K,L volledig geordende lichamen, dan is er een bijectie $\alpha:K \to L$ die de ordening behoudt en de lichaamsoperaties (0, x + y,x * y}
 \uitwerking{
 Er is maar \'e\'en geordend lichaam
 $x,y \in K$\\
@@ -36,6 +40,16 @@ is een inverse afbeelding van $\alpha$\\
 dus $\beta(\alpha(x))=x$ en $\alpha(\beta(y))=y$\\
 dus $\alpha \wedge \beta$ zijn bijecties!\\
 $\beta(\alpha(x))=sup(\{r\in \Q |r < sup(\{s\in \Q | s<x\})\})=x$
+}
+
+\stelling{Zij $y \in \R \geq 0 \wedge n \in \N \Rightarrow \exists! 0 \leq x \in \R$ zdd $x^n = y$}
+\bewijs{
+\uitwerking{
+Niet meer dan 1 opl:\\
+$a^n-b^n=(a-b)(a^{n-1}+ba^{n-2}+...+ab^{n-2)+b^{n-1})$\\
+Zij $a,b>0 $ dan $(a^{n-1}+ba^{n-2}+...+ab^{n-2)+b^{n-1}) > 0$\\
+$a,b>0\wedgeb a^n=b^n$ dan $a=b$
+}
 }
 
 \feit{$\frac{1}{n}$ is een nulrij}
