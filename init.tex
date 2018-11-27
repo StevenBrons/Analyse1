@@ -1,13 +1,21 @@
+
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+ \vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+ \prevdepth=\tpd}
+
 \newcommand{\uitwerking}[1]{
 	\begin{tabular}{|ll}
     	#1 &
 	\end{tabular}
 }
 
-
 \newcommand{\definitie}[2]{
-    \textbf{Def:} #1\\*
-	\uitwerking{#2}\\*
+	\begin{absolutelynopagebreak}
+		\textbf{Def:} #1\\*
+		\uitwerking{#2}\\*
+	\end{absolutelynopagebreak}
 }
 
 \newcommand{\als}[1]{
@@ -18,13 +26,26 @@
     \textbf{Feit:} #1\\
 }
 
+\newcommand{\voorbeeld}[1]{
+		\textbf{Voorbeeld:}\\
+		\uitwerking{#1}\\
+}
+\newcommand{\gevolg}[1]{
+		\textbf{Gevolg:}\\
+		\uitwerking{#1}\\
+}
+
 \newcommand{\bewijs}[1]{
-	\textbf{Bewijs:}\\
-	\uitwerking{#1}\qed
+	\begin{absolutelynopagebreak}
+		\textbf{Bewijs:}\\
+		\uitwerking{#1}\qed
+	\end{absolutelynopagebreak}
 }
 
 \newcommand{\stelling}[1]{
+	\begin{absolutelynopagebreak}
     \textbf{Stelling:} #1\\
+	\end{absolutelynopagebreak}
 }
 
 \newcommand{\lemma}[1]{
