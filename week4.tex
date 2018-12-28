@@ -61,3 +61,42 @@ dan $\lim\inf a_n = \lim\sup a_n = x$}
 	$x-\epsilon \leq M_n = sup\{a_k|k\geq n\}\leq x+\epsilon \to$\\
 	$M_n \rightarrow x$ dus $\lim\sup a_n = x$
 }
+\subsection*{3.2.5-achtige stellingen voor $\liminf$ en $\limsup$}
+\stelling{\\
+	$\limsup (a_n+b_n)\leq\limsup a_n+\limsup b_n$\\
+	$\liminf (a_n+b_n)\geq\liminf a_n+\liminf b_n$
+}
+\bewijs{
+	$\sup\{a_k+b_k|k\geq n\}\leq\sup\{a_k|k\geq n\}+\sup\{b_k|k\geq n\}$\\
+	$\inf\{a_k+b_k|k\geq n\}\geq\inf\{a_k|k\geq n\}+\inf\{b_k|k\geq n\}$
+}
+\stelling{
+	Als $a_n\geq0;b_n\geq0$ dan\\
+	$\limsup (a_nb_n)\leq\limsup a_n\cdot\limsup b_n$\\
+	$\liminf (a_nb_n)\geq\liminf a_n\cdot\liminf b_n$
+}
+\bewijs{
+	$\sup\{a_kb_k|k\geq n\}\leq\sup\{a_k|k\geq n\}\cdot\sup\{b_k|k\geq n\}$\\
+	$\inf\{a_kb_k|k\geq n\}\geq\inf\{a_k|k\geq n\}\cdot\inf\{b_k|k\geq n\}$
+}
+\stelling{\\
+	Als $\forall_n\exists_{m\geq n} a_n\leq b_m$ dan $\limsup a_n\leq \limsup b_n$\\
+	Als $\forall_n\exists_{m\geq n} a_n\geq b_m$ dan $\liminf a_n\geq \liminf b_n$
+}
+\bewijs{
+	$\forall_n\exists_{m\geq n}a_n\leq b_m$\\
+	$\implies \forall_na_n\leq\sup\{b_m|m\geq n\}$\\
+	$\implies \forall_{n_0}\forall_{n\geq n_0}a_n\leq\sup\{b_m|m\geq n\}\leq\sup\{b_m|m\geq n_0\}$\\
+	$\implies \forall_n\sup\{a_k|k\geq n\}\leq\sup\{b_k|k\geq n\}$\\
+	$\implies \limsup a_n\leq\limsup b_n$\\
+	idem voor $\liminf$
+}
+% \stelling{\\
+% 	Als $\limsup a_n< \limsup b_n$ dan $\exists_{n_0}\forall_{n\geq n_0}\exists_{m\geq n} a_n\leq b_m$\\
+% }
+% \bewijs{
+% 	$\limsup a_n<\limsup b_n$\\
+% 	$\exists_{n_0}\forall_{n\geq n_0} a_n<\limsup b_k$\\
+% 	$\exists_{n_0}\forall_{n\geq n_0}\forall_{m_0}\exists_{m\geq m_0} a_n<b_m$\\
+% 	$\exists_{n_0}\forall_{n\geq n_0}\exists_{m\geq n} a_n<b_m$
+% }
