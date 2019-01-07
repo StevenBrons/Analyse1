@@ -34,3 +34,73 @@
 	Ofwel: $c_k \leq a_{n_k} \leq d_k$, dus samen met $c_k\to l \wedge d_k\to l$\\
 	volgt uit het sandwich principe: $a_{n_k}\to l$
 }
+
+\section*{Week 3}
+\stelling{
+	$(a_n)_{n=0}^\infty$ en $(b_n)_{n=0}^\infty$ zijn rijen reële getallen, dan geldt:
+	\begin{enumerate}[label=\roman*)]
+	\item{
+		Als $\forall_na_n=l$ Dan $a_n\to l$ als $n\to\infty$
+	}
+	\item{
+		Als $(a_n)_{n=0}^\infty$ een nulrij en $(b_n)_{n=0}^\infty$ begrensd dan is $(a_nb_n)_{n=0}^\infty$ een nulrij
+	}
+	\item{
+		Als $a_n\to a$ en $b_n\to b$ als $n\to\infty$ dan $(a_n+b_n)\to a+b$ als $n\to\infty$
+	}
+	\item{
+		Als $a_n\to a$ dan $c\cdot a_n\to c\cdot a$
+	}
+	\item{
+		Als $a_n\to a$ en $b_n\to b$ dan $a_nb_n\to ab$
+	}
+	\item{
+		Als $a_n\to a;a_n\neq0;a\neq0$ dan $1/a_n\to1/a$
+	}
+	\item{
+		Als $a_n\to a;b_n\to b;\forall_na_n\leq b_n$ dan $a\leq b$
+	}
+	\item{
+		Als $a_n\to a$ dan $a_{n_k}\to a$ voor alle deelrijen $a_{n_k}$
+	}
+	\end{enumerate}.
+}
+\bewijs{@Steven: enumerate wordt niet geaccepteerd binnen\\bewijzen,zelf geen oplossing kunnen vinden}
+\begin{enumerate}[label=\roman*)]
+	\item{
+		Voor alle $\epsilon>0$ neem $n_0=0$
+	}
+	\item{
+		$\exists_M\forall_n\left|b_n\right|<M$\\
+		$\forall_{\epsilon>0}\exists_{n_0}\forall_{n\geq n_0}\left|a_n\right|<\epsilon/M$\\
+		$\forall_{\epsilon>0}\exists_{n_0}\forall_{n\geq n_0}\left|a_nb_n\right|<\epsilon$
+	}
+	\item{
+		Voor een gegeven $\epsilon>0$ geldt:\\
+		$\exists_{n_0}\forall_{n\geq n_0}|a_n-a|<\epsilon/2$ en $\exists_{m_0}\forall_{m\geq m_0}|b_m-b|<\epsilon/2$\\
+		Dus dan geldt $\forall_{n\geq\max(n_0,m_0)}|a_n+b_n-a-b|$\\$\leq|a_n-a|+|b_n-b|\leq\epsilon$
+	}
+	\item{
+		Er zijn 2 gevallen: $c=0$ is triviaal en $c\neq0$:
+		Gegeven $\epsilon>0$ geldt $\exists_{n_0}\forall{n\geq n_0}|a_n-a|<\epsilon/|c|$
+		Dus $\forall_{\epsilon>0}\exists_{n_0}\forall_{n\geq n_0}|ca_n-ca|<\epsilon$
+	}
+	\item{
+		$a_nb_n-ab=(a_n-a)(b_n-b)+(a_n-a)b+a(b_n-b)$\\
+		$(a_n-a)\to0;(b_n-b)\text{ begrensd}\Rightarrow(a_n-a)(b_n-b)\to0$\\
+		$(a_n-a)\to0\implies(a_n-a)b\to0$\\
+		$(b_n-b)\to0\implies a(b_n-b)\to0$\\
+		$a_nb_n-ab\to0$
+	}
+	\item{
+		$|1/a_na|$ is begrensd dus $|a_n-a|/|a_na\to0$ en dus $|1/a_n-1/a|\to0$
+	}
+	\item{
+		Stel $a>b$ dan $\exists_{n_0}\forall_{n\geq n_0}|(a_n-b_n)-(a-b)|<a-b$ maar dan geldt $a_n-b_n>0$ \lightning\\
+		$a\leq b$
+	}
+	\item{
+		Gegeven $\epsilon>0$ geldt $\exists_{N}\forall_{n\geq N}|a_n-a|<\epsilon$ en er geldt $\exists_{k_0}\forall_{k\geq k_0}n_k>N$
+		Dus $\forall_{\epsilon>0}\exists_{k_0}\forall_{k\geq k_0}|a_{n_k}-a|<\epsilon$
+	}
+\end{enumerate}
