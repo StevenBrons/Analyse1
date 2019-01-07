@@ -1,32 +1,71 @@
-\section{Week 4}
 
-\definitie{$\lim\inf$ en $\lim\sup$}{
-	Als $\{a_n\}$ niet convergeert:\\
-	$M=\sup\{a_n|n\in\N\}\in\R\cup\{\infty\}$\\
-	$m=inf\{a_n|n\in\N\}\in\R\cup\{-\infty\}$\\
-	$M=+\infty \iff \{a_n\}$ niet naar boven begrensd\\	
-	$m=-\infty \iff \{a_n\}$ niet naar beneden begrensd\\	
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+ \vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+ \prevdepth=\tpd}
 
-	$M_n=\sup\{a_k|k\geq n\}$\\
-	$m_n=inf\{a_k|k\leq n\}$\\
-	$M_1=M \wedge m_1=m$\\
-	$\forall n:m_n\leq M_n$\\
-	De rij $\{M_n\}$ is dalend ($M_1\leq M_2\leq...$)\\
-	omdat $\{a_k|n+1\} \subseteq \{a_k|k\geq n\} \to$\\
-	$\sup\{a_k|n+1\} \leq \sup\{a_k|k\leq n\}$\\
-	Analoog: $\{m_n\}$ is stijgend\\
-	$M_n \geq m \wedge m_n\leq M$\\
+\newcommand{\uitwerking}[1]{
+	\begin{tabular}{|ll}
+    	#1 &
+	\end{tabular}
+}
 
-	De rij $\{M_n\}$ is dalend en naar beneden begrensd\\
-	dus convergent: \\
-	$\lim_{n\to\infty}M_n\equiv \lim\sup a_n = (\overline{\lim} a_n)$\\
-	De rij $\{m_n\}$ is stijdend en naar boven begrensd\\
-	dus convergent: \\
-	$\lim_{n\to\infty}m_n\equiv \lim\inf a_n = (\underline{\lim} a_n)$\\
-	$ \forall n: m_n \leq M_n \to$\\
-	$ \forall n: \lim\inf a_n \leq \lim\sup a_n$\\
-	Voor een begrensde rij bestaat $\lim\sup \wedge \lim\inf$\\
-	\voorbeeld{
-	$\forall n: a_n=(-1)^n \to M_n = 1 \wedge m_n = -1 \to \lim\sup a_n = 1 \wedge \lim\sup a_n = -1$
-	}
+\newcommand{\definitie}[2]{
+	\begin{absolutelynopagebreak}
+		\textbf{Def:} #1\\*
+		\uitwerking{#2}\\*
+	\end{absolutelynopagebreak}
+}
+
+\newcommand{\als}[1]{
+    \textbf{Als:} #1
+}
+
+\newcommand{\feit}[1]{
+    \textbf{Feit:} #1\\
+}
+
+\newcommand{\voorbeeld}[1]{
+		\textbf{Voorbeeld:}\\
+		\uitwerking{#1}\\
+}
+\newcommand{\gevolg}[1]{
+		\textbf{Gevolg:}\\
+		\uitwerking{#1}\\
+}
+
+\newcommand{\bewijs}[1]{
+		\textbf{Bewijs:}\\
+		\uitwerking{#1}\qed
+}
+
+\newcommand{\stelling}[1]{
+	\begin{absolutelynopagebreak}
+    \textbf{Stelling:} #1\\
+	\end{absolutelynopagebreak}
+}
+
+\newcommand{\lemma}[1]{
+    \textbf{Lemma:} #1\\
+}
+
+\newcommand{\propositie}[1]{
+    \textbf{Propositie:} #1\\
+}
+
+\newcommand{\N}[0]{
+   \mathbb{N}
+}
+\newcommand{\Z}[0]{
+   \mathbb{Z}
+}
+\newcommand{\Q}[0]{
+   \mathbb{Q}
+}
+\newcommand{\R}[0]{
+   \mathbb{R}
+}
+\newcommand{\C}[0]{
+   \mathbb{C}
 }

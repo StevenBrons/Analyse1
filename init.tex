@@ -36,10 +36,8 @@
 }
 
 \newcommand{\bewijs}[1]{
-	\begin{absolutelynopagebreak}
-		\textbf{Bewijs:}\\
-		\uitwerking{#1}\qed
-	\end{absolutelynopagebreak}
+	\textbf{Bewijs:}\\
+	\uitwerking{#1}\qed
 }
 
 \newcommand{\stelling}[1]{
@@ -54,6 +52,12 @@
 
 \newcommand{\propositie}[1]{
     \textbf{Propositie:} #1\\
+}
+
+\newcommand{\abs}[1]{
+	\left|
+	#1
+	\right|
 }
 
 \newcommand{\N}[0]{

@@ -1,2 +1,36 @@
 \section{Week 3}
 
+\stelling{Bolzano-Weierstrass: Stel $(a_n)_{n=0}^\infty$ is een begrensde rij van re\'ele getallen. Dan is er een deelrij $(a_{n_k})^\infty_{k=1}$ die convergeert.}
+\bewijs{
+	$(a_n)_{n=0}^\infty$ is begrensd, \\
+	dus er zijn $c_0 < d_0 \in \R$ zdd $a_n\in [c_0,d_0] \forall n$\\
+	def $e_i = \frac{c_i+d_i}{2}$\\
+	def $I_i = \{a_n|n\in\N\wedge a_n\in[c_i,e_i]\}$\\
+	def $J_i = \{a_n|n\in\N\wedge a_n\in[e_i,d_i]\}$\\
+	Nu ittereren we $e_i,I_i,J_i$ door nieuwe $c_i,d_i$ te bepalen:\\
+	\als{
+		$I_i$ oneindig is:\\
+			$c_{i+1}=c_i$\\
+			$d_{i+1}=e_i$\\
+	}
+	\als{
+		$I_i$ eindig is: (dan is $J_i$ oneindig)\\
+			$c_{i+1}=e_i$\\
+			$d_{i+1}=d_i$\\
+	}
+	Dit geeft dus $(c_n)_{n\in\N},(d_n)_{n\in\N}$ zdd:\\
+	$c_n < d_n$\\
+	$d_n - c_n = \frac{d_0-c_0}{2^n}$
+	waarbij $\frac{d_0-c_0}{2^n} \xrightarrow{n \to \infty} 0$\\
+	dus $c_n=d_n$ als $n\to\infty$\\
+	$(c_n)$ is monotoon stijgend\\
+	$(d_n)$ is monotoon dalend\\
+	$c_n \geq d_0 \wedge d_n \leq c_0$\\
+	Dus $c_n \to l \wedge d_n \to m$\\
+	Maar zoals we zagen $l = m$\\
+	Definieer nu $n_1$ zdd $a_{n_1}\in[c_1,d_1]$ en \\
+	$n_k$ zdd $a_{n_k}\in[c_k,d_k] \wedge n_k > n_{k-1}$\\
+	Dus we kunnen $n_1<n_2<n_3<...$ kiezen zdd $a_{n_k}\in[c_k,d_k]$\\
+	Ofwel: $c_k \leq a_{n_k} \leq d_k$, dus samen met $c_k\to l \wedge d_k\to l$\\
+	volgt uit het sandwich principe: $a_{n_k}\to l$
+}
